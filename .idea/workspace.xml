@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598898840448</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="implemented first attempt for update function">
+      <created>1598899695424</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598899695424</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -137,17 +144,18 @@
     <MESSAGE value="created deep q network class, which will be the core of the algorithm and implemented init method" />
     <MESSAGE value="added select action function which should choose the correct action given a current state" />
     <MESSAGE value="added learn method where the network computes the outputs and the cost function and backpropagates them to adapt the weights" />
-    <option name="LAST_COMMIT_MESSAGE" value="added learn method where the network computes the outputs and the cost function and backpropagates them to adapt the weights" />
+    <MESSAGE value="implemented first attempt for update function" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented first attempt for update function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1598877310848">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598877310848" />
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598898840250">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598899695253">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598898840250" />
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598899695253" />
     <state width="1419" height="125" key="GridCell.Tab.0.bottom" timestamp="1598897781472">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
