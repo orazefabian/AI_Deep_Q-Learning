@@ -4,7 +4,6 @@
     <list default="true" id="e998bda4-2794-4ad2-92e1-0a8efa1d9698" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Self_Driving_Car/ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/ai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Self_Driving_Car/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598879819956</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="created deep q network class, which will be the core of the algorithm and implemented init method">
+      <created>1598881432664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598881432664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -114,17 +120,18 @@
     <MESSAGE value="implemented forward function to return q_values given a certain state" />
     <MESSAGE value="created new class for storing and replaying memory (the last moves that were taken)" />
     <MESSAGE value="implemented needed methods for the replay memory class" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented needed methods for the replay memory class" />
+    <MESSAGE value="created deep q network class, which will be the core of the algorithm and implemented init method" />
+    <option name="LAST_COMMIT_MESSAGE" value="created deep q network class, which will be the core of the algorithm and implemented init method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1598877310848">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598877310848" />
-    <state x="344" y="52" key="CommitChangelistDialog2" timestamp="1598879819808">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598881432357">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="344" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598879819808" />
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598881432357" />
     <state width="1419" height="142" key="GridCell.Tab.0.bottom" timestamp="1598876516859">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

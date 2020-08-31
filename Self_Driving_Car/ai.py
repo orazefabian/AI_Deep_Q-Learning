@@ -54,7 +54,7 @@ class MemoryReplay(object):
 # deep q-learning algorithm
 
 class Dqn:
-    
+
     def __init__(self, input_size, nb_actions, gamma, capacity):
         self.gamma = gamma
         self.rewards = []
@@ -64,3 +64,9 @@ class Dqn:
         self.last_state = torch.Tensor(input_size).unsqueeze(0)
         self.last_action = 0
         self.last_reward = 0
+
+    def select_action(self, state):
+        probs = F.softmax(self.model(Variable(state, volelile=True)) * 7)  # T=7
+        action = probs.multinomial(num_samples=1)
+        return action.data[0, 0]
+
