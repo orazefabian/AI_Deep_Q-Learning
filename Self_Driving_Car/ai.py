@@ -107,6 +107,8 @@ class Dqn:
             checkpoint = torch.load('trained_brain.pth')
             self.model.load_state_dict(checkpoint['state_dict'])
             self.optimizer.load_state_dict(checkpoint['optimizer'])
+        else:
+            print("no such file found...")
 
 
 
