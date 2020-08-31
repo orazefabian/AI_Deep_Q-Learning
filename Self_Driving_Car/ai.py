@@ -50,3 +50,17 @@ class MemoryReplay(object):
         samples = zip(*random.sample(self.memory, batch_size))
         return map(lambda x: Variable(torch.cat(x, 0)), samples)
 
+
+# deep q-learning algorithm
+
+class Dqn:
+    
+    def __init__(self, input_size, nb_actions, gamma, capacity):
+        self.gamma = gamma
+        self.rewards = []
+        self.model = Network(input_size, nb_actions)
+        self.memory = MemoryReplay(capacity)
+        self.optimizer = optim.Adam(self.model.parameters(), lr=0.001)
+        self.last_state = torch.Tensor(input_size).unsqueeze(0)
+        self.last_action = 0
+        self.last_reward = 0
