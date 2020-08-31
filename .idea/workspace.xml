@@ -24,7 +24,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RunManager">
     <configuration name="map" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -140,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598900391671</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added some methods to load and save already trained brains">
+      <created>1598901262422</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598901262422</updated>
+    </task>
+    <task id="LOCAL-00011" summary="little fix">
+      <created>1598901310051</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598901310051</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -153,44 +167,50 @@
     <MESSAGE value="added learn method where the network computes the outputs and the cost function and backpropagates them to adapt the weights" />
     <MESSAGE value="implemented first attempt for update function" />
     <MESSAGE value="fixed update function to now properly update all variables and return the last action" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed update function to now properly update all variables and return the last action" />
+    <MESSAGE value="added some methods to load and save already trained brains" />
+    <MESSAGE value="little fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="little fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1598877310848">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598877310848" />
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598901262236">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598901309924">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598901262236" />
-    <state width="1419" height="125" key="GridCell.Tab.0.bottom" timestamp="1598897781472">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598901309924" />
+    <state width="1419" height="160" key="GridCell.Tab.0.bottom" timestamp="1598901938131">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="125" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598897781472" />
+    <state width="1419" height="160" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598901938131" />
     <state width="1419" height="209" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1598875848384" />
-    <state width="1419" height="125" key="GridCell.Tab.0.center" timestamp="1598897781471">
+    <state width="1419" height="160" key="GridCell.Tab.0.center" timestamp="1598901938130">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="125" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598897781471" />
+    <state width="1419" height="160" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598901938130" />
     <state width="1419" height="209" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state width="1419" height="125" key="GridCell.Tab.0.left" timestamp="1598897781471">
+    <state width="1419" height="160" key="GridCell.Tab.0.left" timestamp="1598901938130">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="125" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598897781471" />
+    <state width="1419" height="160" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598901938130" />
     <state width="1419" height="209" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state width="1419" height="125" key="GridCell.Tab.0.right" timestamp="1598897781472">
+    <state width="1419" height="160" key="GridCell.Tab.0.right" timestamp="1598901938131">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="125" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598897781472" />
+    <state width="1419" height="160" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598901938131" />
     <state width="1419" height="209" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1598898390241">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1598901933301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598898390241" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598901933301" />
     <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598881389482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1598881389482" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1598901924354">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1598901924354" />
   </component>
 </project>

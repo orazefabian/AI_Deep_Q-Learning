@@ -65,7 +65,7 @@ class Dqn:
         self.last_reward = 0
 
     def select_action(self, state):
-        probs = F.softmax(self.model(Variable(state, volelile=True)) * 7)  # T=7
+        probs = F.softmax(self.model(Variable(state, volatile=True)) * 7)  # T=7
         action = probs.multinomial(num_samples=1)
         return action.data[0, 0]
 
