@@ -30,11 +30,23 @@ class Network(nn.Module):
         q_values = self.fc2(x)
         return q_values
 
+
 # replay experience class
 
 class MemoryReplay(object):
-    
+
     def __init__(self, capacity):
         self.capacity = capacity
         self.memory = []
+
+    # method to push a new transition or event to our memory storage
+    def push(self, transition):
+        self.memory.append(transition)
+        if len(self.memory) > self.capacity:
+            del self.memory[0]
+
+    # method which reshapes the events and maps the samples to a torch type variable
+    def sample(self, batch_size):
+        samples = zip(*random.sample(self.memory, batch_size))
+        return map(lambda x: Variable(torch.cat(x, 0)), samples)
 
