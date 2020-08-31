@@ -226,6 +226,7 @@ class CarApp(App):
         parent.add_widget(clearbtn)
         parent.add_widget(savebtn)
         parent.add_widget(loadbtn)
+
         return parent
 
     def clear_canvas(self, obj):
