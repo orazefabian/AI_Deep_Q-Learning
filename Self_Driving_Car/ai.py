@@ -94,3 +94,24 @@ class Dqn:
             del self.rewards[0]
         return action
 
+    def score(self):
+        return sum(self.rewards) / (len(self.rewards) + 1.)
+
+    def save(self):
+        torch.save({'state_dict': self.model.state_dict(),
+                    'optimizer': self.optimizer.state_dict()}, 'trained_brain.pth')
+
+    def load(self):
+        if os.path.isfile('trained_brain.pth'):
+            print("loading the model...")
+            checkpoint = torch.load('trained_brain.pth')
+            self.model.load_state_dict(checkpoint['state_dict'])
+            self.optimizer.load_state_dict(checkpoint['optimizer'])
+
+
+
+
+
+
+
+    
