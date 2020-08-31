@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e998bda4-2794-4ad2-92e1-0a8efa1d9698" name="Default Changelist" comment="">
+    <list default="true" id="e998bda4-2794-4ad2-92e1-0a8efa1d9698" name="Default Changelist" comment="added select action function which should choose the correct action given a current state">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Self_Driving_Car/ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/ai.py" afterDir="false" />
     </list>
@@ -24,7 +24,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="map" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598881432664</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added select action function which should choose the correct action given a current state">
+      <created>1598882372806</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598882372806</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,41 +128,42 @@
     <MESSAGE value="created new class for storing and replaying memory (the last moves that were taken)" />
     <MESSAGE value="implemented needed methods for the replay memory class" />
     <MESSAGE value="created deep q network class, which will be the core of the algorithm and implemented init method" />
-    <option name="LAST_COMMIT_MESSAGE" value="created deep q network class, which will be the core of the algorithm and implemented init method" />
+    <MESSAGE value="added select action function which should choose the correct action given a current state" />
+    <option name="LAST_COMMIT_MESSAGE" value="added select action function which should choose the correct action given a current state" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1598877310848">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598877310848" />
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598881432357">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598897698567">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598881432357" />
-    <state width="1419" height="142" key="GridCell.Tab.0.bottom" timestamp="1598876516859">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598897698567" />
+    <state width="1419" height="125" key="GridCell.Tab.0.bottom" timestamp="1598897781472">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="142" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598876516859" />
+    <state width="1419" height="125" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598897781472" />
     <state width="1419" height="209" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1598875848384" />
-    <state width="1419" height="142" key="GridCell.Tab.0.center" timestamp="1598876516858">
+    <state width="1419" height="125" key="GridCell.Tab.0.center" timestamp="1598897781471">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="142" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598876516858" />
+    <state width="1419" height="125" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598897781471" />
     <state width="1419" height="209" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state width="1419" height="142" key="GridCell.Tab.0.left" timestamp="1598876516857">
+    <state width="1419" height="125" key="GridCell.Tab.0.left" timestamp="1598897781471">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="142" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598876516857" />
+    <state width="1419" height="125" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598897781471" />
     <state width="1419" height="209" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state width="1419" height="142" key="GridCell.Tab.0.right" timestamp="1598876516858">
+    <state width="1419" height="125" key="GridCell.Tab.0.right" timestamp="1598897781472">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="142" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598876516858" />
+    <state width="1419" height="125" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598897781472" />
     <state width="1419" height="209" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1598880608067">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1598898390241">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598880608067" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598898390241" />
     <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598881389482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
