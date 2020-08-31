@@ -1,7 +1,6 @@
 # AI for self driving car
 
 # import all libraries
-from typing import Any
 
 import numpy as np
 import random
@@ -61,7 +60,7 @@ class Dqn:
         self.model = Network(input_size, nb_actions)
         self.memory = MemoryReplay(capacity)
         self.optimizer = optim.Adam(self.model.parameters(), lr=0.001)
-        self.last_state = torch.Tensor(input_size).unsqueeze(0)
+        self.last_state = torch.Tensor(input_size).unsqueeze(0)  # needing a fake dimension for a tensor type
         self.last_action = 0
         self.last_reward = 0
 
@@ -78,3 +77,9 @@ class Dqn:
         self.optimizer.zero_grad()
         td_loss.backward(retain_graph=True)
         self.optimizer.step()  # update weights with this step
+
+    def update(self, reward, new_signal):
+        new_state = torch.Tensor(new_signal).float().unsqueeze(0)
+        self.memory.push(
+            (self.last_state, new_state, torch.LongTensor([int(self.last_action)]), torch.Tensor([self.last_reward])))
+        
