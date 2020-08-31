@@ -14,6 +14,8 @@ import torch.autograd as autograd
 from torch.autograd import Variable
 
 
+# architecture for neural network
+
 class Network(nn.Module):
 
     def __init__(self, input_size, nb_actions):
@@ -28,4 +30,11 @@ class Network(nn.Module):
         q_values = self.fc2(x)
         return q_values
 
+# replay experience class
+
+class MemoryReplay(object):
+    
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.memory = []
 
