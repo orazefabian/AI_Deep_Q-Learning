@@ -4,6 +4,7 @@
     <list default="true" id="e998bda4-2794-4ad2-92e1-0a8efa1d9698" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Self_Driving_Car/ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/ai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Self_Driving_Car/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598901310051</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="another little fix...">
+      <created>1598901951423</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598901951423</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -169,41 +177,46 @@
     <MESSAGE value="fixed update function to now properly update all variables and return the last action" />
     <MESSAGE value="added some methods to load and save already trained brains" />
     <MESSAGE value="little fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="little fix" />
+    <MESSAGE value="another little fix..." />
+    <option name="LAST_COMMIT_MESSAGE" value="another little fix..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1598877310848">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598877310848" />
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598901309924">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598901951278">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598901309924" />
-    <state width="1419" height="160" key="GridCell.Tab.0.bottom" timestamp="1598901938131">
+    <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598901951278" />
+    <state width="1419" height="188" key="GridCell.Tab.0.bottom" timestamp="1598902471656">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="160" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598901938131" />
+    <state width="1419" height="188" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598902471656" />
     <state width="1419" height="209" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1598875848384" />
-    <state width="1419" height="160" key="GridCell.Tab.0.center" timestamp="1598901938130">
+    <state width="1419" height="188" key="GridCell.Tab.0.center" timestamp="1598902471655">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="160" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598901938130" />
+    <state width="1419" height="188" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598902471655" />
     <state width="1419" height="209" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state width="1419" height="160" key="GridCell.Tab.0.left" timestamp="1598901938130">
+    <state width="1419" height="188" key="GridCell.Tab.0.left" timestamp="1598902471655">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="160" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598901938130" />
+    <state width="1419" height="188" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598902471655" />
     <state width="1419" height="209" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
-    <state width="1419" height="160" key="GridCell.Tab.0.right" timestamp="1598901938131">
+    <state width="1419" height="188" key="GridCell.Tab.0.right" timestamp="1598902471656">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="160" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598901938131" />
+    <state width="1419" height="188" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598902471656" />
     <state width="1419" height="209" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1598875848383" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1598901933301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598901933301" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598902607228">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1598902607228" />
     <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598881389482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

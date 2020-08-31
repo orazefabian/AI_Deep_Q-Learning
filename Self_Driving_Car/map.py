@@ -29,7 +29,7 @@ n_points = 0
 length = 0
 
 # Getting our AI, which we call "brain", and that contains our neural network that represents our Q-function
-brain = Dqn(5, 3, 0.9, 100000)
+brain = Dqn(5, 3, 0.9)
 action2rotation = [0, 20, -20]
 last_reward = 0
 scores = []

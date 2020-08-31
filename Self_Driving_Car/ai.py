@@ -54,11 +54,11 @@ class MemoryReplay(object):
 
 class Dqn:
 
-    def __init__(self, input_size, nb_actions, gamma, capacity):
+    def __init__(self, input_size, nb_actions, gamma):
         self.gamma = gamma
         self.rewards = []
         self.model = Network(input_size, nb_actions)
-        self.memory = MemoryReplay(capacity)
+        self.memory = MemoryReplay(100000)
         self.optimizer = optim.Adam(self.model.parameters(), lr=0.001)
         self.last_state = torch.Tensor(input_size).unsqueeze(0)  # needing a fake dimension for a tensor type
         self.last_action = 0
@@ -73,10 +73,10 @@ class Dqn:
         outputs = self.model(batch_state).gather(1, batch_action.unsqueeze(1)).squeeze(1)
         next_outputs = self.model(batch_next_state).detach().max(1)[0]
         target = self.gamma * next_outputs + batch_reward
-        td_loss = F.smooth_l1_loss(outputs, target)  # best cost function for q-learning
+        td_loss = F.smooth_l1_loss(outputs, target)
         self.optimizer.zero_grad()
         td_loss.backward(retain_graph=True)
-        self.optimizer.step()  # update weights with this step
+        self.optimizer.step()
 
     def update(self, reward, new_signal):
         new_state = torch.Tensor(new_signal).float().unsqueeze(0)
@@ -84,7 +84,7 @@ class Dqn:
             (self.last_state, new_state, torch.LongTensor([int(self.last_action)]), torch.Tensor([self.last_reward])))
         action = self.select_action(new_state)
         if len(self.memory.memory) > 100:
-            batch_state, batch_next_state, batch_reward, batch_action = self.memory.sample(100)
+            batch_state, batch_next_state, batch_action, batch_reward = self.memory.sample(100)
             self.learn(batch_state, batch_next_state, batch_reward, batch_action)
         self.last_action = action
         self.last_state = new_state
@@ -109,11 +109,3 @@ class Dqn:
             self.optimizer.load_state_dict(checkpoint['optimizer'])
         else:
             print("no such file found...")
-
-
-
-
-
-
-
-    
