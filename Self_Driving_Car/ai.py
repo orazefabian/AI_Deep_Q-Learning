@@ -23,5 +23,9 @@ class Network(nn.Module):
         self.fc1 = nn.Linear(input_size, 30)  # second parameter is the amount of hidden layer nodes
         self.fc2 = nn.Linear(30, nb_actions)  # fc2 is connection between hidden layer and output layer
 
-    def _forward_unimplemented(self, *input: Any) -> None:
-        pass
+    def forward(self, state):
+        x = F.relu(self.fc1(state))
+        q_values = self.fc2(x)
+        return q_values
+
+
