@@ -122,6 +122,10 @@ class Ball3(Widget):
 # Creating the game class
 
 class Game(Widget):
+    def __init__(self, **kwargs):
+        self.time_passed = time.process_time()
+        super().__init__(**kwargs)
+
     car = ObjectProperty(None)
     imageCar = ObjectProperty(None)
     ball1 = ObjectProperty(None)
@@ -136,6 +140,7 @@ class Game(Widget):
 
         global brain
         global last_reward
+        global punishment
         global scores
         global last_distance
         global goal_x
@@ -147,6 +152,7 @@ class Game(Widget):
         largeur = self.height
         if first_update:
             init()
+            punishment = 0
 
         xx = goal_x - self.car.x
         yy = goal_y - self.car.y
@@ -164,12 +170,16 @@ class Game(Widget):
 
         if sand[int(self.car.x), int(self.car.y)] > 0:
             self.car.velocity = Vector(1, 0).rotate(self.car.angle)
-            last_reward = -1
+            last_reward = -2
         else:  # otherwise
             self.car.velocity = Vector(6, 0).rotate(self.car.angle)
             last_reward = -0.2
             if distance < last_distance:
-                last_reward = 0.1
+                last_reward = 0.05
+
+        if time.process_time() - self.time_passed > 4:
+            punishment += 0.1
+            self.time_passed = time.process_time()
 
         if self.car.x < 10:
             self.car.x = 10
@@ -187,7 +197,9 @@ class Game(Widget):
         if distance < 100:
             goal_x = self.width - goal_x
             goal_y = self.height - goal_y
+            punishment = 0
         last_distance = distance
+        last_reward -= punishment
 
 
 # Adding the painting tools
