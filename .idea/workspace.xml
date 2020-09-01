@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e998bda4-2794-4ad2-92e1-0a8efa1d9698" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Self_Driving_Car/ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/ai.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Self_Driving_Car/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Self_Driving_Car/trained_brain.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Self_Driving_Car/trained_brain.pth" afterDir="false" />
     </list>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598959415538</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added one more condition to algorithm, if the car now drives too long without reaching the goal it is getting an increasing punishment">
+      <created>1598962068465</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598962068465</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -194,7 +202,8 @@
     <MESSAGE value="another little fix..." />
     <MESSAGE value="fixed crashing..." />
     <MESSAGE value="added image to represent a car and applied necessary changes to kivy file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added image to represent a car and applied necessary changes to kivy file" />
+    <MESSAGE value="added one more condition to algorithm, if the car now drives too long without reaching the goal it is getting an increasing punishment" />
+    <option name="LAST_COMMIT_MESSAGE" value="added one more condition to algorithm, if the car now drives too long without reaching the goal it is getting an increasing punishment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1598877310848">
@@ -205,31 +214,31 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1598902987482" />
-    <state x="344" y="23" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598959415321">
+    <state x="344" y="23" width="981" height="900" key="CommitChangelistDialog2" timestamp="1598962068209">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="344" y="0" width="981" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598902635618" />
-    <state x="344" y="23" key="CommitChangelistDialog2/0.23.1440.819@0.23.1440.819" timestamp="1598959415321" />
-    <state width="1419" height="120" key="GridCell.Tab.0.bottom" timestamp="1598960641287">
+    <state x="344" y="23" key="CommitChangelistDialog2/0.23.1440.819@0.23.1440.819" timestamp="1598962068209" />
+    <state width="1419" height="112" key="GridCell.Tab.0.bottom" timestamp="1598973927041">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state width="1419" height="284" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598958983621" />
-    <state width="1419" height="120" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1598960641287" />
-    <state width="1419" height="120" key="GridCell.Tab.0.center" timestamp="1598960641287">
+    <state width="1419" height="112" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1598973927041" />
+    <state width="1419" height="112" key="GridCell.Tab.0.center" timestamp="1598973927040">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state width="1419" height="284" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598958983620" />
-    <state width="1419" height="120" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1598960641287" />
-    <state width="1419" height="120" key="GridCell.Tab.0.left" timestamp="1598960641286">
+    <state width="1419" height="112" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1598973927040" />
+    <state width="1419" height="112" key="GridCell.Tab.0.left" timestamp="1598973927040">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state width="1419" height="284" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598958983619" />
-    <state width="1419" height="120" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1598960641286" />
-    <state width="1419" height="120" key="GridCell.Tab.0.right" timestamp="1598960641287">
+    <state width="1419" height="112" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1598973927040" />
+    <state width="1419" height="112" key="GridCell.Tab.0.right" timestamp="1598973927040">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state width="1419" height="284" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598958983620" />
-    <state width="1419" height="120" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1598960641287" />
+    <state width="1419" height="112" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1598973927040" />
     <state width="1419" height="284" key="GridCell.Tab.1.bottom" timestamp="1598958983623">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

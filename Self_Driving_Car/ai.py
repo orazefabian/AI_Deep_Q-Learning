@@ -59,13 +59,14 @@ class Dqn:
         self.rewards = []
         self.model = Network(input_size, nb_actions)
         self.memory = MemoryReplay(100000)
-        self.optimizer = optim.Adam(self.model.parameters(), lr=0.001)
+        self.optimizer = optim.Adam(self.model.parameters(), lr=0.0005)
         self.last_state = torch.Tensor(input_size).unsqueeze(0)  # needing a fake dimension for a tensor type
         self.last_action = 0
         self.last_reward = 0
+        self.time_punishment = 0
 
     def select_action(self, state):
-        probs = F.softmax(self.model(Variable(state, volatile=True)) * 150)  # T=7
+        probs = F.softmax(self.model(Variable(state, volatile=True)) * 200)  # temperature
         action = probs.multinomial(num_samples=1)
         return action.data[0, 0]
 

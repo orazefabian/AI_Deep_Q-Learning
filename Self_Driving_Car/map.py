@@ -16,6 +16,8 @@ from kivy.config import Config
 from kivy.properties import NumericProperty, ReferenceListProperty, ObjectProperty
 from kivy.vector import Vector
 from kivy.clock import Clock
+from shapely.geometry import Point
+from shapely.geometry.polygon import Polygon
 
 # Importing the Dqn object from our AI in ai.py
 from Self_Driving_Car.ai import Dqn
@@ -141,18 +143,26 @@ class Game(Widget):
         global brain
         global last_reward
         global punishment
+        global counter
         global scores
         global last_distance
         global goal_x
         global goal_y
         global longueur
         global largeur
+        global point
+        global poly
+        global sand_penalty
 
         longueur = self.width
         largeur = self.height
         if first_update:
             init()
             punishment = 0
+            counter = 0
+            sand_penalty = -2
+            poly = Polygon([(self.car.x - 50, self.car.y - 50), (self.car.x - 50, self.car.y + 50),
+                            (self.car.x + 50, self.car.y + 50), (self.car.x + 50, self.car.y - 50)])
 
         xx = goal_x - self.car.x
         yy = goal_y - self.car.y
@@ -170,15 +180,16 @@ class Game(Widget):
 
         if sand[int(self.car.x), int(self.car.y)] > 0:
             self.car.velocity = Vector(1, 0).rotate(self.car.angle)
-            last_reward = -2
+            last_reward = sand_penalty
         else:  # otherwise
             self.car.velocity = Vector(6, 0).rotate(self.car.angle)
-            last_reward = -0.2
+            last_reward = -0.002
             if distance < last_distance:
-                last_reward = 0.05
+                last_reward = 0.01
 
-        if time.process_time() - self.time_passed > 4:
+        if time.process_time() - self.time_passed > 2:
             punishment += 0.1
+            print("Time punishment now: " + str(punishment))
             self.time_passed = time.process_time()
 
         if self.car.x < 10:
@@ -194,12 +205,26 @@ class Game(Widget):
             self.car.y = self.height - 10
             last_reward = -1
 
+        if counter % 100 == 0:
+            poly = Polygon([(self.car.x - 50, self.car.y - 50), (self.car.x - 50, self.car.y + 50),
+                            (self.car.x + 50, self.car.y + 50), (self.car.x + 50, self.car.y - 50)])
+
+        point = Point(self.car.x, self.car.y)
+        if poly.contains(point):
+            punishment += 0.01
+
         if distance < 100:
             goal_x = self.width - goal_x
             goal_y = self.height - goal_y
             punishment = 0
+            last_reward = 5
+            print("Destination reached! --> reset punishment")
+            self.time_passed = time.process_time()
         last_distance = distance
         last_reward -= punishment
+        counter += 1
+        if counter % 40 == 0:
+            print("Last reward -->  " + str(last_reward))
 
 
 # Adding the painting tools
