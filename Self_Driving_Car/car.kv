@@ -13,6 +13,18 @@
             size: self.size
         PopMatrix
 
+<ImageCar>:
+    source: 'car_top_view.png'
+    size: 40,30
+    canvas.before:
+        PushMatrix
+        Rotate:
+            angle: root.angle
+            axis: 0, 0, 1
+            origin: root.center
+    canvas.after:
+        PopMatrix
+
 <Ball1>:
     size: 10,10
     canvas:
@@ -41,6 +53,7 @@
 
 <Game>:
     car: game_car
+    imageCar: car_image
     ball1: game_ball1
     ball2: game_ball2
     ball3: game_ball3
@@ -48,6 +61,9 @@
     Car:
         id: game_car
         center: self.parent.center
+    ImageCar:
+        id: car_image
+        center: game_car.center
     Ball1:
         id: game_ball1
         center: self.parent.center

@@ -8,6 +8,7 @@ import time
 
 # Importing the Kivy packages
 from kivy.app import App
+from kivy.uix.image import Image
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 from kivy.graphics import Color, Ellipse, Line
@@ -95,6 +96,17 @@ class Car(Widget):
             self.signal3 = 1.
 
 
+class ImageCar(Image):
+    angle = NumericProperty(0)
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.rotation = Vector(30, 0).rotate(self.angle) + self.pos
+
+    def rotate_car(self, rotation):
+        self.angle = self.angle + rotation
+
+
 class Ball1(Widget):
     pass
 
@@ -111,6 +123,7 @@ class Ball3(Widget):
 
 class Game(Widget):
     car = ObjectProperty(None)
+    imageCar = ObjectProperty(None)
     ball1 = ObjectProperty(None)
     ball2 = ObjectProperty(None)
     ball3 = ObjectProperty(None)
@@ -143,6 +156,7 @@ class Game(Widget):
         scores.append(brain.score())
         rotation = action2rotation[action]
         self.car.move(rotation)
+        self.imageCar.rotate_car(rotation)
         distance = np.sqrt((self.car.x - goal_x) ** 2 + (self.car.y - goal_y) ** 2)
         self.ball1.pos = self.car.sensor1
         self.ball2.pos = self.car.sensor2
