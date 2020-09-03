@@ -160,9 +160,9 @@ class Game(Widget):
             init()
             punishment = 0
             counter = 0
-            sand_penalty = -2
-            poly = Polygon([(self.car.x - 50, self.car.y - 50), (self.car.x - 50, self.car.y + 50),
-                            (self.car.x + 50, self.car.y + 50), (self.car.x + 50, self.car.y - 50)])
+            sand_penalty = -4
+            poly = [Polygon([(self.car.x - 50, self.car.y - 50), (self.car.x - 50, self.car.y + 50),
+                             (self.car.x + 50, self.car.y + 50), (self.car.x + 50, self.car.y - 50)])]
 
         xx = goal_x - self.car.x
         yy = goal_y - self.car.y
@@ -206,20 +206,22 @@ class Game(Widget):
             last_reward = -1
 
         if counter % 100 == 0:
-            poly = Polygon([(self.car.x - 50, self.car.y - 50), (self.car.x - 50, self.car.y + 50),
-                            (self.car.x + 50, self.car.y + 50), (self.car.x + 50, self.car.y - 50)])
+            poly.append(Polygon([(self.car.x - 10, self.car.y - 10), (self.car.x - 10, self.car.y + 10),
+                                 (self.car.x + 10, self.car.y + 10), (self.car.x + 10, self.car.y - 10)]))
 
         point = Point(self.car.x, self.car.y)
-        if poly.contains(point):
-            punishment += 0.01
+        for p in poly:
+            if p.contains(point):
+                punishment += 0.01
 
-        if distance < 100:
+        if distance < 100:  # once it reaches goal
             goal_x = self.width - goal_x
             goal_y = self.height - goal_y
             punishment = 0
             last_reward = 5
             print("Destination reached! --> reset punishment")
             self.time_passed = time.process_time()
+
         last_distance = distance
         last_reward -= punishment
         counter += 1

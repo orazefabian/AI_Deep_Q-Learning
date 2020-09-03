@@ -59,7 +59,7 @@ class Dqn:
         self.rewards = []
         self.model = Network(input_size, nb_actions)
         self.memory = MemoryReplay(100000)
-        self.optimizer = optim.Adam(self.model.parameters(), lr=0.0005)
+        self.optimizer = optim.Adam(self.model.parameters(), lr=0.005)
         self.last_state = torch.Tensor(input_size).unsqueeze(0)  # needing a fake dimension for a tensor type
         self.last_action = 0
         self.last_reward = 0
